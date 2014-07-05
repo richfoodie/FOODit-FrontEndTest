@@ -26,4 +26,11 @@ We want to see how you think,  code, design and functional flows. We just want t
 •	Show type of controls or UI patterns
 Some of our ideas
 •	How could you use meal names, description and price to do a faceted search
-•	Using the meal name or description look up example photo of the dish using flicker, google image or another service asynchronously
+•	Using the meal name or description look up example photo of the dish using flicker, goo	gle image or another service asynchronously
+
+## Example of working with the API
+The FOODit Marketplace API allows you to get demo data about each meal in area. By using the "marketplace.meals.search". Using the Google API Explorer you can have look around some this API’s.
+1. Lets start by go to https://1-dot-endpoints-dot-foodit-uat.appspot.com/, our API will redirect to API Explorer.
+2. Check out FOODit Marketplace API
+3. Go to “marketplace.meals.search”. Put in a Geo location e.g. 51.536215, -0.103181 
+4. Check out the results of meals
