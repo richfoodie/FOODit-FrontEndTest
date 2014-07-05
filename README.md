@@ -36,3 +36,4 @@ The FOODit Marketplace API allows you to get demo data about each meal in area. 
 2. Check out FOODit Marketplace API
 3. Go to “marketplace.meals.search”. Put in a Geo location e.g. 51.536215, -0.103181
 4. Check out the results of meals
+5. You can find SDK for our API's also in github which might help you speed up the development. But the API's very simple so might not be needed.
