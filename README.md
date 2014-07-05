@@ -19,14 +19,15 @@ If you’re here it sounds like you’re on your way to becoming a FOODie. Welco
 3. Send over the Andriod APK file to jobs@foodit.com
 
 ## Goal of the Project
-We want to see how you think,  code, design and functional flows. We just want to make sure people can find food that they going to enjoy. We understand that different types of people excel in different ways.   
-•	Help people find food going to enjoy
-•	Should be responsive to different size device
-•	Should allow user to sort data in help full ways
-•	Show type of controls or UI patterns
-Some of our ideas
-•	How could you use meal names, description and price to do a faceted search
-•	Using the meal name or description look up example photo of the dish using flicker, goo	gle image or another service asynchronously
+We want to see how you think,  code, design and functional flows. We just want to make sure people can find food that they going to enjoy. We understand that different types of people excel in different ways.  
+- Help people find food going to enjoy
+- Should be responsive to different size device
+- Should allow user to sort data in help full ways
+- Show type of controls or UI patterns
+Some of our ramdom ideas
+- How could you use meal names, description and price to do a faceted search
+- Using the meal name or description look up example photo of the dish using flicker, goo	gle image or another service asynchronously
+
 
 ## Example of working with the API
 The FOODit Marketplace API allows you to get demo data about each meal in area. By using the "marketplace.meals.search". Using the Google API Explorer you can have look around some this API’s.
