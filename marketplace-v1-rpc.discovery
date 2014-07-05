@@ -1,0 +1,411 @@
+{
+ "kind": "discovery#rpcDescription",
+ "etag": "\"p_qcyFV0KQVqSB1Aq3pqmPu-2MY/3J85KbDAItfL03Aaeg0S-e6QffQ\"",
+ "discoveryVersion": "v1",
+ "id": "marketplace:v1",
+ "name": "marketplace",
+ "canonicalName": "FOODit Marketplace",
+ "version": "v1",
+ "title": "FOODit Marketplace API",
+ "description": "FOODit Marketplace Endpoints",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rpc",
+ "rootUrl": "https://foodit-uat.appspot.com/_ah/api/",
+ "rpcUrl": "https://foodit-uat.appspot.com/_ah/api/rpc",
+ "rpcPath": "/_ah/api/rpc",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "BigDecimal": {
+   "id": "BigDecimal",
+   "type": "object",
+   "properties": {
+    "scale": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "Meal": {
+   "id": "Meal",
+   "type": "object",
+   "properties": {
+    "created": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "description": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "modified": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "name": {
+     "type": "string"
+    },
+    "nextItemToken": {
+     "type": "string"
+    },
+    "photo": {
+     "type": "string"
+    },
+    "price": {
+     "$ref": "BigDecimal"
+    },
+    "restaurant": {
+     "$ref": "Restaurant"
+    },
+    "restaurantId": {
+     "type": "string",
+     "format": "int64"
+    },
+    "restaurantUrl": {
+     "type": "string",
+     "format": "int64"
+    }
+   }
+  },
+  "MealCollection": {
+   "id": "MealCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Meal"
+     }
+    }
+   }
+  },
+  "Restaurant": {
+   "id": "Restaurant",
+   "type": "object",
+   "properties": {
+    "created": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "distance": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "latitude": {
+     "type": "number",
+     "format": "double"
+    },
+    "longitude": {
+     "type": "number",
+     "format": "double"
+    },
+    "meals": {
+     "type": "array",
+     "items": {
+      "$ref": "Meal"
+     }
+    },
+    "modified": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "name": {
+     "type": "string"
+    },
+    "nextItemToken": {
+     "type": "string"
+    },
+    "postcode": {
+     "type": "string"
+    },
+    "radius": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "restaurant": {
+     "type": "string"
+    },
+    "website": {
+     "type": "string"
+    }
+   }
+  },
+  "RestaurantCollection": {
+   "id": "RestaurantCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Restaurant"
+     }
+    }
+   }
+  },
+  "StringCollection": {
+   "id": "StringCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "format": "int64"
+     }
+    }
+   }
+  }
+ },
+ "methods": {
+  "marketplace.meals.get": {
+   "id": "marketplace.meals.get",
+   "allowGet": true,
+   "parameters": {
+    "mealId": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id",
+    "mealId"
+   ],
+   "returns": {
+    "$ref": "Meal"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "marketplace.meals.search": {
+   "id": "marketplace.meals.search",
+   "allowGet": true,
+   "parameters": {
+    "location": {
+     "type": "string",
+     "required": true
+    },
+    "maxResults": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "pageToken": {
+     "type": "string"
+    },
+    "postcode": {
+     "type": "string"
+    },
+    "q": {
+     "type": "string"
+    },
+    "regionCode": {
+     "type": "string"
+    }
+   },
+   "parameterOrder": [
+    "location"
+   ],
+   "returns": {
+    "$ref": "MealCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "marketplace.meals.sync": {
+   "id": "marketplace.meals.sync",
+   "allowGet": true,
+   "parameters": {
+    "date": {
+     "type": "string",
+     "format": "date-time"
+    }
+   },
+   "returns": {
+    "$ref": "StringCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "marketplace.restaurants.get": {
+   "id": "marketplace.restaurants.get",
+   "allowGet": true,
+   "parameters": {
+    "restaurantId": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id",
+    "restaurantId"
+   ],
+   "returns": {
+    "$ref": "Restaurant"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "marketplace.restaurants.list": {
+   "id": "marketplace.restaurants.list",
+   "allowGet": true,
+   "parameters": {
+    "maxResults": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "pageToken": {
+     "type": "string"
+    }
+   },
+   "returns": {
+    "$ref": "RestaurantCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "marketplace.restaurants.meals": {
+   "id": "marketplace.restaurants.meals",
+   "allowGet": true,
+   "parameters": {
+    "maxResults": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "pageToken": {
+     "type": "string"
+    },
+    "restaurantId": {
+     "type": "string",
+     "required": true,
+     "format": "int64"
+    }
+   },
+   "parameterOrder": [
+    "id",
+    "restaurantId"
+   ],
+   "returns": {
+    "$ref": "MealCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "marketplace.restaurants.search": {
+   "id": "marketplace.restaurants.search",
+   "allowGet": true,
+   "parameters": {
+    "location": {
+     "type": "string",
+     "required": true
+    },
+    "maxResults": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "pageToken": {
+     "type": "string"
+    },
+    "postcode": {
+     "type": "string"
+    },
+    "q": {
+     "type": "string"
+    }
+   },
+   "parameterOrder": [
+    "location"
+   ],
+   "returns": {
+    "$ref": "RestaurantCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "marketplace.restaurants.sync": {
+   "id": "marketplace.restaurants.sync",
+   "allowGet": true,
+   "parameters": {
+    "date": {
+     "type": "string",
+     "format": "date-time"
+    }
+   },
+   "returns": {
+    "$ref": "StringCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}
