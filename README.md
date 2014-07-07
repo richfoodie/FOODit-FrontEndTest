@@ -1,7 +1,7 @@
 FOODit-FrontEndTest
 ===================
 
-If you’re here it sounds like you’re on your way to becoming a FOODie. Welcome to the FOODit Front End Project. Using our test API’s https://1-dot-endpoints-dot-foodit-uat.appspot.com/ we would like you to build a project using web or native technology.
+If you’re here it sounds like you’re on your way to becoming a FOODie. Welcome to the FOODit Front End Project. Using our test APIs https://1-dot-endpoints-dot-foodit-uat.appspot.com/ we would like you to build a project using web or native technology.
 
 We have deliberately left this task quite open as we want to let you create something you feel meets the brief as outlined in the section below:
 
@@ -19,7 +19,7 @@ Some of our ramdom ideas/thoughts/scribbles...
 - Using the meal name or description look up example photo of the dish using flicker, google image or another service asynchronously
 - How would discovery & recommendation vs direct ecommerce ordering work?
 
-Depending on your sill set, pick one of the 3 different ways to build the app
+Depending on your skill set, pick one of the 3 different ways to build the app
 
 ### Building the app with Web technology (requirements)
 1. Your project should render the data from the API in a web brower using HTML, CSS and JS
@@ -38,7 +38,7 @@ Depending on your sill set, pick one of the 3 different ways to build the app
 
 
 ## Example of working with the API
-The FOODit Marketplace API allows you to get demo data about each meal in area. By using the "marketplace.meals.search". Using the Google API Explorer you can have look around some this API’s.
+The FOODit Marketplace API allows you to get demo data about each meal in area. By using the "marketplace.meals.search". Using the Google API Explorer you can have look around some this APIs.
 
 1. Lets start by go to https://1-dot-endpoints-dot-foodit-uat.appspot.com/, our API will redirect to API Explorer.
 2. Check out FOODit Marketplace API
