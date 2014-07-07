@@ -3,15 +3,17 @@ FOODit-FrontEndTest
 
 If you’re here it sounds like you’re on your way to becoming a FOODie. Welcome to the FOODit Front End Project. Using our test API’s https://1-dot-endpoints-dot-foodit-uat.appspot.com/ we would like you to build a project using web or native technology.
 
-We have deliberately left this task quite open as we want to let you create something you feel meets this brief:
+We have deliberately left this task quite open as we want to let you create something you feel meets the brief as outlined in the section below:
 
 ## Goal of the Project
 We want to see how you think, code, design and construct functional flows. 
 Our goal with the marketplace we are building is to make sure that consumers can find the right meal, based on their taste profile. We know that people have different opinions on food, so we want to build a product that is deeply personalisable, fun, rewarding and educational.  
+
 - Help people find food they are going to enjoy
 - Work seamlessly across a range of device resolutions and sizes
 - Should allow the user to sort data and filter to create personalised results
-- Show type of controls or UI patterns
+- Offer a mix of discovery & ecommerce or focus on one independantly
+
 Some of our ramdom ideas/thoughts/scribbles...
 - How could you use meal names, description and price to do a faceted search
 - Using the meal name or description look up example photo of the dish using flicker, google image or another service asynchronously
